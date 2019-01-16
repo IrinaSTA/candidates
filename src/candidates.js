@@ -27,3 +27,8 @@ function filterCandidateBySkill(candidates, skill) {
     return candidate.skills.includes(skill);
   });
 }
+function renderTable(table, candidates) {
+      removeRowsFromTable(table);
+      const newTbody = newCandidatesTable.getElementsByTagName('tbody')[0];
+      addCandidatesToTable(newTbody, candidates);
+    }

@@ -57,11 +57,7 @@
     const candidatesTable = document.getElementById("candidates_example");
     const newCandidatesTable = candidatesTable.cloneNode(true);
 
-    removeRowsFromTable(newCandidatesTable);
-    const newTbody = newCandidatesTable.getElementsByTagName('tbody')[0];
-
-    const filteredCandidates = filterCandidateBySkill(newCandidates, 'JavaScript')
-    addCandidatesToTable(newTbody, newCandidates)
+    renderTable(newCandidatesTable, newCandidates);
 
     document.body.appendChild(newCandidatesTable);
 
