@@ -98,8 +98,9 @@
     }
 
     function filterCandidateBySkill(candidates, skill) {
-      // INSERT YOUR LOGIC HERE   <-------------------------
-      return candidates;
+      return candidates.filter(function (candidate) {
+        return candidate.skills.includes(skill);
+      });
     }
 
     const candidatesTable = document.getElementById("candidates_example");
