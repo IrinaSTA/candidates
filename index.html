@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="public/styles.css">
+  <script src="src/candidates.js"></script>
   <title>Document</title>
 </head>
 
@@ -46,36 +47,6 @@
       { name: "Matt", skills: ["PHP", "AWS"] },
       { name: "Matt", skills: ["PHP", ".Net", "Docker"] },
     ];
-
-    function removeRowsFromTable(table) {
-      const rows = table.getElementsByTagName("tr");
-
-      while (rows.length > 1) {
-        table.deleteRow(1);
-      }
-    }
-
-    function insertCandidate(tbody, name, skills) {
-      const newRow = tbody.insertRow();
-      const nameCell = newRow.insertCell();
-      const skillCell = newRow.insertCell();
-
-      const candidateName = document.createTextNode(name);
-      const candidateSkills = document.createTextNode(skills.join(', '));
-
-      nameCell.appendChild(candidateName);
-      skillCell.appendChild(candidateSkills);
-    }
-
-    function addCandidatesToTable(table, candidates) {
-      candidates.forEach(candidate => insertCandidate(table, candidate.name, candidate.skills));
-    }
-
-    function filterCandidateBySkill(candidates, skill) {
-      return candidates.filter(function (candidate) {
-        return candidate.skills.includes(skill);
-      });
-    }
 
     const candidatesTable = document.getElementById("candidates_example");
     const newCandidatesTable = candidatesTable.cloneNode(true);
