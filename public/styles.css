@@ -1,7 +1,10 @@
+body {
+  margin: 45px;
+}
+
 .candidates {
   font-size: 12px;
   background: #fff;
-  margin: 45px;
   width: 480px;
   border-collapse: collapse;
   text-align: left;
@@ -22,4 +25,8 @@
 
 .candidates tbody tr:hover td {
   color: #009;
+}
+
+.table-heading {
+  color: #991a00;
 }
