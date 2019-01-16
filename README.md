@@ -7,7 +7,7 @@ This is a tech test for which I had to modify an existing index.html file to all
 
 ## My approach
 
-- I first modified the filterCandidateBySkill method to work. I added a test for this method using the Jasmine testing framework.
+- I first modified the filterCandidateBySkill method to work. I added a test for this method using Jasmine.
 - I broke code up into sections to observe separation of concerns.
 - I added filtering to the page using jquery. To reset the table, the user can simply hit Submit when the filter is empty.
 - I extended the styling to give the page a tidy, uniform look.
