@@ -56,7 +56,7 @@
     const newTbody = newCandidatesTable.getElementsByTagName('tbody')[0];
 
     const filteredCandidates = filterCandidateBySkill(newCandidates, 'JavaScript')
-    addCandidatesToTable(newTbody, filteredCandidates)
+    addCandidatesToTable(newTbody, newCandidates)
 
     document.body.appendChild(newCandidatesTable);
 
